@@ -7,9 +7,10 @@
     <title>HTML-CSS 38</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -19,18 +20,27 @@
           <img src="./images/logo.svg" alt="logo" />
         </a>
         <nav>
-          <ul>
-            <li>
-              <a href="">О нас</a>
+          <ul class="navList">
+            <li class="item">
+              <a href="#about">О нас</a>
             </li>
             <li>
-              <a href="">Услуги и цены</a>
+              <a href="#price">
+                Услуги и
+                <span>цены</span>
+              </a>
             </li>
             <li>
-              <a href="">Мастера</a>
+              <ul>
+                <li>Вложенный список</li>
+                <li>Вложенный список</li>
+              </ul>
             </li>
             <li>
-              <a href="">Контакты</a>
+              <a href="#masters">Мастера</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
           <ul>
@@ -58,10 +68,33 @@
             <p>A hair salon for men in Kyiv</p>
             <h1>BarberShop</h1>
             <p>
-              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
-              и со вкусом.
+              Мы
+              <strong>эксперты</strong>
+              в
+              <em>модных</em>
+              мужских
+              <i>стрижках.</i>
+              <br />
+              Работаем
+              <b>быстро, осторожно и со вкусом.</b>
             </p>
           </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+            rerum obcaecati, eligendi aut, molestias iste harum enim vel quod
+            cupiditate culpa unde placeat id sit quaerat. Consequuntur obcaecati
+            voluptate modi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos
+            provident tempora asperiores ipsa corrupti magni ipsum. Laboriosam,
+            labore hic deleniti cumque, itaque, officia ea dolorem maxime quidem
+            dicta voluptatum.
+          </p>
+
+          <pre>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur corporis expedita a quia amet nobis facere veniam aliquam repellat vero omnis sit quae, esse quis dicta aliquid obcaecati!</pre
+          >
 
           <ul>
             <li>
@@ -73,7 +106,7 @@
           </ul>
         </div>
       </section>
-      <section>
+      <section id="about" class="about">
         <div class="container">
           <ul>
             <li>
@@ -101,7 +134,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="price">
         <div class="container">
           <p>Проведи время в компании лучших мастеров</p>
           <h2>Услуги и цены</h2>
@@ -164,7 +197,15 @@
         <div class="container">
           <ul>
             <li>
-              <p>600</p>
+              <p>
+                600
+                <sup>&#10010;</sup>
+              </p>
+              <p>
+                600
+                <sub>+</sub>
+              </p>
+
               <p>Довольных клиентов в день</p>
             </li>
             <li>
@@ -180,6 +221,27 @@
               <p>Подарков постоянным клиентам</p>
             </li>
           </ul>
+          <!-- альтернатива списку (исп-ся для ассестивщины) -->
+          <!-- <div>
+            <dl>
+              <dt>600</dt>
+              <dd>Довольных клиентов в день</dd>
+            </dl>
+            <dl>
+              <dt>50</dt>
+              <dd>Наград за отличный сервис</dd>
+            </dl>
+            <dl>
+              <dt>20</dt>
+              <dd>Лучших мастеров Киева</dd>
+            </dl>
+            <dl>
+              <dt>100</dt>
+              <dd>Подарков постоянным клиентам</dd>
+            </dl>
+          </div> -->
+          <!-- альтернатива списку (исп-ся для ассестивщины) -->
+
           <div>
             <p>старая традиционная школа</p>
             <h2>Почему приходят именно к нам?</h2>
@@ -190,7 +252,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="masters">
         <div class="container">
           <p>для настоящих ценителей атмосферы</p>
           <h2>Наши мастера</h2>
@@ -311,7 +373,7 @@
             </form>
           </div>
 
-          <div>
+          <div id="contacts">
             <h2>Контакты</h2>
             <address>
               <ul>

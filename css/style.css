@@ -1,0 +1,54 @@
+/* универсальный селектор */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* селектор тега */
+ul {
+  list-style: none;
+}
+
+/* классовый селектор */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  background: rgba(0, 0, 0, 0.13);
+
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+
+/* селектор идентификатора */
+
+#about {
+  background: purple;
+}
+.about {
+  background: pink;
+}
+
+/* вес селектора = 10 */
+.navList {
+  background: powderblue;
+}
+
+/* селектор ребенка  вес = 10 + 1*/
+.navList > li {
+  border: 2px solid black;
+}
+/* вес селектора = 10 + 10 */
+.navList .item {
+  border: 4px solid  brown;
+}
+/* селектор наследника */
+.navList li {
+  border: 3px solid blue;
+}
+
+/* 
+id   class tag
+100  10    1
+*/
