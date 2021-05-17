@@ -1,0 +1,73 @@
+/* универсальный селектор */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* селектор тега */
+  ul {
+    list-style: none;
+  }
+  
+  /* классовый селектор */
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  
+    /* background: rgba(0, 0, 0, 0.13); */
+  
+    /* margin-right: auto;
+    margin-left: auto; */
+  }
+  
+  /* селектор идентификатора */
+  
+  #about {
+    /* background: purple; */
+  }
+  .about {
+    /* background: pink; */
+  }
+  
+  /* вес селектора = 10 */
+  .navList {
+    /* background: powderblue; */
+  }
+  
+  /* селектор ребенка  вес = 10 + 1*/
+  .navList > li {
+    /* border: 2px solid black; */
+  }
+  /* вес селектора = 10 + 10 */
+  .navList .item {
+    /* border: 4px solid  brown; */
+  }
+  /* селектор наследника */
+  .navList li {
+    /* border: 3px solid blue; */
+  }
+  
+  /* 
+  red    yellow   green   blue
+  inline id       class   tag
+  1000   100      10      1
+  */
+  /* вес селектора - 100 */
+  /* #body {
+    background-color: yellow;
+  } */
+  /* увеличина вес селектора = 1 + 10 */
+  body.body {
+    background-color: black;
+    color: wheat;
+  }
+  /* вес селектора - 10 */
+  .body {
+    background-color: green;
+  }
+  /* вес селектора - 1 */
+  body {
+    background-color: blue;
+  }
+  

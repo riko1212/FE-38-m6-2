@@ -1,54 +1,86 @@
-/* универсальный селектор */
+/* VARIABLES */
+:root {
+  --pretty-color: #ff6c00;
+  --while-color: #ffffff;
+  --main-font: 'Open Sans', sans-serif;
+  --accent-font: 'Raleway', sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* селектор тега */
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+}
+
 ul {
+  /* убрали маркеры у списка */
   list-style: none;
 }
 
-/* классовый селектор */
+a {
+  /* наследуй цвет шрифта от родителя */
+  color: inherit;
+  /* убрали нижнее подчеркивание */
+  text-decoration: none;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+.sign-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.362;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  /*   top-bottom  & right-left   */
+  padding: 12px 20px;
+  border: 1px solid var(--pretty-color);
+  border-radius: 25px;
 
-  background: rgba(0, 0, 0, 0.13);
-
-  /* margin-right: auto;
-  margin-left: auto; */
+  /* top & right & bottom & left  */
+  /* padding: 12px 20px 12px 20px; */
+  /*    top & right-left & bottom */
+  /* padding: 12px 20px 12px; */
+  /* каждому отдельно! */
+  /* padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px; */
+}
+.sign-link:hover {
+  background-color: var(--pretty-color);
+}
+/* HEADER STYLES */
+.header {
+  background: black;
+  color: var(--while-color);
+}
+/* эффект наведения курсора мыши */
+/* .navList a:hover {
+  color: var(--pretty-color);
+} */
+/* эффект фокусировки, когда нажали и держим, TAB */
+/* .navList a:focus {
+  color: chartreuse;
+} */
+/* а теперь то же самое, только через перечисление селекторов */
+.navList a:hover,
+.navList a:focus,
+.mediaList a:hover,
+.mediaList a:focus {
+  color: var(--pretty-color);
 }
 
-/* селектор идентификатора */
+/* .navList a:active {
+  color: aqua;
+  font-size: 28px;
+} */
 
-#about {
-  background: purple;
-}
-.about {
-  background: pink;
-}
-
-/* вес селектора = 10 */
-.navList {
-  background: powderblue;
-}
-
-/* селектор ребенка  вес = 10 + 1*/
-.navList > li {
-  border: 2px solid black;
-}
-/* вес селектора = 10 + 10 */
-.navList .item {
-  border: 4px solid  brown;
-}
-/* селектор наследника */
-.navList li {
-  border: 3px solid blue;
-}
-
-/* 
-id   class tag
-100  10    1
-*/
+/* HEADER STYLES */

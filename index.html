@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML-CSS 38</title>
+    <!-- нормализация стилей -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
@@ -12,17 +13,19 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+  <!-- <body id="body" class="body" style="background-color: red;">
+  <body id="body" class="body"> -->
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <!-- My comment -->
         <a href="">
           <img src="./images/logo.svg" alt="logo" />
         </a>
         <nav>
-          <ul class="navList">
+          <ul class="nav-list">
             <li class="item">
-              <a href="#about">О нас</a>
+              <a href="#about" class="active">О нас</a>
             </li>
             <li>
               <a href="#price">
@@ -30,12 +33,12 @@
                 <span>цены</span>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <ul>
                 <li>Вложенный список</li>
                 <li>Вложенный список</li>
               </ul>
-            </li>
+            </li> -->
             <li>
               <a href="#masters">Мастера</a>
             </li>
@@ -43,9 +46,13 @@
               <a href="#contacts">Контакты</a>
             </li>
           </ul>
-          <ul>
-            <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
-            <li><a href="">онлайн-запись</a></li>
+          <ul class="media-list">
+            <li class="item">
+              <a href="tel:+380441111111">+38 044 111 11 11</a>
+            </li>
+            <li class="item">
+              <a href="#" class="sign-link">онлайн-запись</a>
+            </li>
           </ul>
         </nav>
       </div>
