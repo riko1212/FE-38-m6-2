@@ -2,8 +2,12 @@
 :root {
   --pretty-color: #ff6c00;
   --while-color: #ffffff;
+  --black-color: #303030;
   --main-font: 'Open Sans', sans-serif;
   --accent-font: 'Raleway', sans-serif;
+  --grey-op: rgba(157, 164, 189, 0.6);
+  --grey: #9da4bd;
+  --dark-grey: #555555;
 }
 
 * {
@@ -14,6 +18,11 @@
 
 body {
   font-family: var(--main-font);
+  font-style: normal;
+  font-weight: normal;
+  color: var(--black-color);
+}
+address {
   font-style: normal;
 }
 
@@ -30,9 +39,13 @@ a {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
+  width: 1200px;
 }
+/* #price .sign-link {
+  border: 2px solid green;
+} */
+
 .sign-link {
   font-weight: 600;
   font-size: 12px;
@@ -56,10 +69,39 @@ a {
 }
 .sign-link:hover {
   background-color: var(--pretty-color);
+  color: var(--while-color);
 }
+
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--accent-font);
+  font-size: 42px;
+  line-height: 1.167;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+}
+
+.media-list li:hover,
+.media-list li:focus {
+  color: var(--pretty-color);
+}
+
 /* HEADER STYLES */
 .header {
-  background: black;
+  background: var(--black-color);
   color: var(--while-color);
 }
 /* эффект наведения курсора мыши */
@@ -71,10 +113,12 @@ a {
   color: chartreuse;
 } */
 /* а теперь то же самое, только через перечисление селекторов */
-.navList a:hover,
-.navList a:focus,
-.mediaList a:hover,
-.mediaList a:focus {
+.nav-list a:hover,
+.nav-list a:focus,
+.phone-link:hover,
+.phone-link:focus,
+.media-list a:hover,
+.media-list a:focus {
   color: var(--pretty-color);
 }
 
@@ -84,3 +128,74 @@ a {
 } */
 
 /* HEADER STYLES */
+
+/* HERO section */
+.hero {
+  background-color: var(--black-color);
+  color: var(--while-color);
+}
+.hero .pre-title {
+  color: var(--grey-op);
+}
+.hero .title {
+  font-size: 72px;
+  line-height: 1.181;
+}
+.hero .text {
+  color: var(--dark-grey);
+}
+
+.slider-buttons button {
+  color: var(--grey-op);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey-op);
+  width: 60px;
+  text-align: left;
+  padding-bottom: 8px;
+}
+.slider-buttons button:last-child {
+  text-align: right;
+}
+.slider-buttons button:hover,
+.slider-buttons button:focus {
+  cursor: pointer;
+  color: var(--while-color);
+  border-bottom: 1px solid var(--while-color);
+}
+
+/* ABOUT section */
+
+.about .description {
+  font-size: 14px;
+  line-height: 1.857;
+
+  letter-spacing: 0.02em;
+
+  color: var(--dark-grey);
+}
+/* ABOUT section */
+
+/* PRICE section */
+.price-section {
+  background-color: var(--black-color);
+  color: var(--while-color);
+}
+
+/* PRICE section */
+/* CONTACTS section */
+.contacs-section {
+  background-color: var(--black-color);
+  color: var(--while-color);
+}
+.contacs-section .sign-link {
+  padding: 12px 38px;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.contacs-section .sign-link:hover,
+.contacs-section .sign-link:focus {
+  background-color: var(--pretty-color);
+}
+/* CONTACTS section */

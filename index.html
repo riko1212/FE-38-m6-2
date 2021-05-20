@@ -13,14 +13,11 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <!-- <body id="body" class="body" style="background-color: red;">
-  <body id="body" class="body"> -->
   <body>
     <header class="header">
       <div class="container">
-        <!-- My comment -->
         <a href="">
-          <img src="./images/logo.svg" alt="logo" />
+          <img src="./images/icons/logo.svg" alt="logo" />
         </a>
         <nav>
           <ul class="nav-list">
@@ -33,12 +30,6 @@
                 <span>цены</span>
               </a>
             </li>
-            <!-- <li>
-              <ul>
-                <li>Вложенный список</li>
-                <li>Вложенный список</li>
-              </ul>
-            </li> -->
             <li>
               <a href="#masters">Мастера</a>
             </li>
@@ -46,9 +37,11 @@
               <a href="#contacts">Контакты</a>
             </li>
           </ul>
-          <ul class="media-list">
+          <ul class="contacts-list">
             <li class="item">
-              <a href="tel:+380441111111">+38 044 111 11 11</a>
+              <a href="tel:+380441111111" class="phone-link">
+                +38 044 111 11 11
+              </a>
             </li>
             <li class="item">
               <a href="#" class="sign-link">онлайн-запись</a>
@@ -59,51 +52,28 @@
     </header>
 
     <main>
-      <!-- Main content -->
-      <section>
+      <section class="hero">
         <div class="container">
-          <ul>
-            <li>
-              <a href="">Instagram</a>
+          <ul class="media-list">
+            <li class="media-list-item item">
+              <a href="" class="link">Instagram</a>
             </li>
-            <li>
+            <li class="media-list-item item">
               <a href="">Youtube</a>
             </li>
           </ul>
 
           <div>
-            <p>A hair salon for men in Kyiv</p>
-            <h1>BarberShop</h1>
-            <p>
-              Мы
-              <strong>эксперты</strong>
-              в
-              <em>модных</em>
-              мужских
-              <i>стрижках.</i>
+            <p class="pre-title">A hair salon for men in Kyiv</p>
+            <h1 class="title">BarberShop</h1>
+            <p class="text">
+              Мы эксперты в модных мужских стрижках.
               <br />
-              Работаем
-              <b>быстро, осторожно и со вкусом.</b>
+              Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
-            rerum obcaecati, eligendi aut, molestias iste harum enim vel quod
-            cupiditate culpa unde placeat id sit quaerat. Consequuntur obcaecati
-            voluptate modi!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos
-            provident tempora asperiores ipsa corrupti magni ipsum. Laboriosam,
-            labore hic deleniti cumque, itaque, officia ea dolorem maxime quidem
-            dicta voluptatum.
-          </p>
 
-          <pre>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur corporis expedita a quia amet nobis facere veniam aliquam repellat vero omnis sit quae, esse quis dicta aliquid obcaecati!</pre
-          >
-
-          <ul>
+          <ul class="slider-buttons">
             <li>
               <button type="button">Назад</button>
             </li>
@@ -124,13 +94,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
             </li>
           </ul>
           <div>
-            <p>о нас</p>
-            <h2>Лучший Барбершоп твоего города</h2>
-            <h3>
+            <p class="pre-title">о нас</p>
+            <h2 class="title">Лучший Барбершоп твоего города</h2>
+            <h3 class="text">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </h3>
-            <p>
+            <p class="description">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
@@ -141,11 +111,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
           </div>
         </div>
       </section>
-      <section id="price">
+      <section id="price" class="price-section">
         <div class="container">
-          <p>Проведи время в компании лучших мастеров</p>
-          <h2>Услуги и цены</h2>
-          <table>
+          <p class="pre-title">Проведи время в компании лучших мастеров</p>
+          <h2 class="title">Услуги и цены</h2>
+          <table class="text">
             <thead>
               <tr>
                 <td>Услуга</td>
@@ -171,7 +141,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
               </tr>
             </tbody>
           </table>
-          <table>
+          <table class="text">
             <thead>
               <tr>
                 <td>Услуга</td>
@@ -250,9 +220,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
           <!-- альтернатива списку (исп-ся для ассестивщины) -->
 
           <div>
-            <p>старая традиционная школа</p>
-            <h2>Почему приходят именно к нам?</h2>
-            <p>
+            <p class="pre-title">старая традиционная школа</p>
+            <h2 class="title">Почему приходят именно к нам?</h2>
+            <p class="text">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и
               прочувствовать, чем 10 раз прочитать.
             </p>
@@ -261,8 +231,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
       </section>
       <section id="masters">
         <div class="container">
-          <p>для настоящих ценителей атмосферы</p>
-          <h2>Наши мастера</h2>
+          <p class="pre-title">для настоящих ценителей атмосферы</p>
+          <h2 class="title">Наши мастера</h2>
           <ul>
             <li>
               <img src="./images/emp1.jpg" alt="employe1" width="370" />
@@ -348,7 +318,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
           </ul>
         </div>
       </section>
-      <section>
+      <section class="">
         <div class="container">
           <!-- <h2></h2> -->
           <p>На латинском языке “барба” означает “борода”</p>
@@ -368,21 +338,21 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
           </ul>
         </div>
       </section>
-      <section>
+      <section class="contacs-section">
         <div class="container">
           <div>
-            <h2>Онлайн-запись</h2>
+            <h2 class="title">Онлайн-запись</h2>
             <form>
               <input type="text" />
               <input type="tel" />
               <textarea></textarea>
-              <button type="submit">отправить</button>
+              <button type="submit" class="sign-link">отправить</button>
             </form>
           </div>
 
           <div id="contacts">
-            <h2>Контакты</h2>
-            <address>
+            <h2 class="title">Контакты</h2>
+            <address class="text">
               <ul>
                 <li>
                   <p>ул. Васильковая, 7А Киев, 08132</p>
@@ -397,7 +367,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
             </address>
             <div>
               <h3>время работы</h3>
-              <p>Ежедневно с 9:00 до 22:00</p>
+              <p class="text">Ежедневно с 9:00 до 22:00</p>
             </div>
           </div>
         </div>
@@ -408,7 +378,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rem consequatur c
       <div class="container">
         <!-- copyright, etc -->
         <p>&copy; Copyright 2020</p>
-        <ul>
+        <ul class="media-list">
           <li>
             <a href="">Instagram</a>
           </li>
