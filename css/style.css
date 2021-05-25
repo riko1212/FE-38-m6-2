@@ -1,3 +1,33 @@
+/* .test-inline {
+  border: 1px solid red;
+  height: 200px;
+  padding: 30px;
+  margin: 30px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: rgb(183, 192, 169);
+  border-radius: 10%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 40%;
+  font-size: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
+} */
+
+/* .test-block {
+  border: 1px solid green;
+  height: 200px;
+  padding: 30px;
+  margin: 30px;
+  font-size: 2rem;
+  font-size: 20%;
+  letter-spacing: 1em;
+} */
+
 /* VARIABLES */
 :root {
   --pretty-color: #ff6c00;
@@ -10,41 +40,18 @@
   --dark-grey: #555555;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: normal;
   color: var(--black-color);
 }
-address {
-  font-style: normal;
-}
-
-ul {
-  /* убрали маркеры у списка */
-  list-style: none;
-}
-
-a {
-  /* наследуй цвет шрифта от родителя */
-  color: inherit;
-  /* убрали нижнее подчеркивание */
-  text-decoration: none;
-}
 
 .container {
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-/* #price .sign-link {
-  border: 2px solid green;
-} */
 
 .sign-link {
   font-weight: 600;
@@ -104,6 +111,10 @@ a {
   background: var(--black-color);
   color: var(--while-color);
 }
+
+.nav-list {
+  display: inline-block;
+}
 /* эффект наведения курсора мыши */
 /* .navList a:hover {
   color: var(--pretty-color);
@@ -134,12 +145,22 @@ a {
   background-color: var(--black-color);
   color: var(--while-color);
 }
+.hero .container {
+  padding-top: 272px;
+  padding-left: 215px;
+  padding-bottom: 40px;
+}
+.media-list {
+  display: none;
+}
 .hero .pre-title {
   color: var(--grey-op);
 }
 .hero .title {
   font-size: 72px;
   line-height: 1.181;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .hero .text {
   color: var(--dark-grey);
@@ -165,7 +186,26 @@ a {
 }
 
 /* ABOUT section */
-
+.about .container {
+  padding-top: 137px;
+  padding-bottom: 119px;
+}
+.about-images-list {
+  /*  */
+}
+.about-images-list li {
+  width: 270px;
+}
+/* .about-images-list li:first-child{
+  margin-right: 45px;
+} */
+.about-images-list li:not(:last-child) {
+  margin-right: 45px;
+}
+.about .title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .about .description {
   font-size: 14px;
   line-height: 1.857;
@@ -173,6 +213,8 @@ a {
   letter-spacing: 0.02em;
 
   color: var(--dark-grey);
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 /* ABOUT section */
 
@@ -181,8 +223,56 @@ a {
   background-color: var(--black-color);
   color: var(--while-color);
 }
-
+.price-section .container {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.price-section .title {
+  margin-top: 20px;
+  margin-bottom: 44px;
+}
+.price-section .sign-link {
+  margin-top: 50px;
+}
 /* PRICE section */
+
+/* features-section */
+.features-section .container {
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+.features-section .title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* features-section */
+
+/* MASTERS section */
+.masters .container {
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+.masters .title {
+  margin-top: 20px;
+  margin-bottom: 44px;
+}
+.masters-list-item {
+  border: 1px solid;
+  width: 370px;
+  text-align: center;
+}
+
+.masters-list-item h3 {
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+.icons-list {
+  width: 180px;
+  margin: 0 auto;
+}
+
+/* MASTERS section */
+
 /* CONTACTS section */
 .contacs-section {
   background-color: var(--black-color);

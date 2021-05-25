@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML-CSS 38</title>
     <!-- нормализация стилей -->
+    <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
@@ -19,6 +20,10 @@
         <a href="">
           <img src="./images/icons/logo.svg" alt="logo" />
         </a>
+        <!-- <a href="#" class="test-inline">INLINE TAG</a>
+        <a href="#" class="test-inline">INLINE TAG</a>
+        <p class="test-block">BLOCK TAG</p>
+        <a href="#">About</a> -->
         <nav>
           <ul class="nav-list">
             <li class="item">
@@ -51,7 +56,7 @@
       </div>
     </header>
 
-    <main>
+   
       <section class="hero">
         <div class="container">
           <ul class="media-list">
@@ -63,7 +68,7 @@
             </li>
           </ul>
 
-          <div>
+          <div class="hero-content">
             <p class="pre-title">A hair salon for men in Kyiv</p>
             <h1 class="title">BarberShop</h1>
             <p class="text">
@@ -83,9 +88,12 @@
           </ul>
         </div>
       </section>
+      <!-- Нужно написать -->
+      <!-- Результат -->
+      <div class="container"></div>
       <section id="about" class="about">
         <div class="container">
-          <ul>
+          <ul class="about-images-list">
             <li>
               <img src="./images/img1.jpg" alt="img1" width="270" />
             </li>
@@ -170,7 +178,7 @@
           <a href="#" class="sign-link">онлайн-запись</a>
         </div>
       </section>
-      <section>
+      <section class="features-section">
         <div class="container">
           <ul>
             <li>
@@ -198,27 +206,6 @@
               <p>Подарков постоянным клиентам</p>
             </li>
           </ul>
-          <!-- альтернатива списку (исп-ся для ассестивщины) -->
-          <!-- <div>
-            <dl>
-              <dt>600</dt>
-              <dd>Довольных клиентов в день</dd>
-            </dl>
-            <dl>
-              <dt>50</dt>
-              <dd>Наград за отличный сервис</dd>
-            </dl>
-            <dl>
-              <dt>20</dt>
-              <dd>Лучших мастеров Киева</dd>
-            </dl>
-            <dl>
-              <dt>100</dt>
-              <dd>Подарков постоянным клиентам</dd>
-            </dl>
-          </div> -->
-          <!-- альтернатива списку (исп-ся для ассестивщины) -->
-
           <div>
             <p class="pre-title">старая традиционная школа</p>
             <h2 class="title">Почему приходят именно к нам?</h2>
@@ -229,17 +216,17 @@
           </div>
         </div>
       </section>
-      <section id="masters">
+      <section id="masters" class="masters">
         <div class="container">
           <p class="pre-title">для настоящих ценителей атмосферы</p>
           <h2 class="title">Наши мастера</h2>
-          <ul>
-            <li>
+          <ul class="masters-list">
+            <li class="masters-list-item">
               <img src="./images/emp1.jpg" alt="employe1" width="370" />
               <h3>John Smith</h3>
               <p>Extreme Barber</p>
-              <ul>
-                <li>
+              <ul class="icons-list">
+                <li >
                   <a href="#">
                     <img src="./images/icons/instagram.svg" alt="insta" />
                   </a>
@@ -249,7 +236,7 @@
                     <img src="./images/icons/twitter.svg" alt="twitter" />
                   </a>
                 </li>
-                <li>
+                <li >
                   <a href="#">
                     <img src="./images/icons/facebook.svg" alt="facebook" />
                   </a>
@@ -261,11 +248,11 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="masters-list-item">
               <img src="./images/emp2.jpg" alt="employe2" width="370" />
               <h3>Michele Doe</h3>
               <p>Extreme Barber</p>
-              <ul>
+              <ul class="icons-list">
                 <li>
                   <a href="#">
                     <img src="./images/icons/instagram.svg" alt="insta" />
@@ -288,11 +275,11 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="masters-list-item">
               <img src="./images/emp3.jpg" alt="employe3" width="370" />
               <h3>John Smith</h3>
               <p>Extreme Barber</p>
-              <ul>
+              <ul class="icons-list">
                 <li>
                   <a href="#">
                     <img src="./images/icons/instagram.svg" alt="insta" />
@@ -388,6 +375,7 @@
         </ul>
       </div>
     </footer>
+    <script src="./js//index.js" type="module"></script>
   </body>
 </html>
 
