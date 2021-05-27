@@ -111,9 +111,39 @@ body {
   background: var(--black-color);
   color: var(--while-color);
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /* а вдруг я захочу, чтобы его вложенные списки встали в столбик */
+  /* flex-direction: column; */
 
+  /* а тут мы разрешили перенос детей на следующую строку,
+ если они не поместились в этой */
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* Альтернатива  */
+  flex-flow: row wrap;
+}
 .nav-list {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+
+  /* 1 вариант - через фикс ширину */
+  /* width: 387px;
+  justify-content: space-between;
+  margin-left: 40px; */
+}
+/* 2 вариант - без фикс ширины */
+.nav-list li {
+  margin-left: 40px;
+}
+.contacts-list {
+  display: flex;
+  align-items: center;
+}
+.contacts-list li:not(:last-child) {
+  margin-right: 40px;
 }
 /* эффект наведения курсора мыши */
 /* .navList a:hover {
@@ -165,7 +195,13 @@ body {
 .hero .text {
   color: var(--dark-grey);
 }
-
+.slider-buttons {
+  display: flex;
+  align-self: flex-end;
+}
+.slider-buttons li:not(:last-child) {
+  margin-right: 26px;
+}
 .slider-buttons button {
   color: var(--grey-op);
   background: transparent;
@@ -189,9 +225,11 @@ body {
 .about .container {
   padding-top: 137px;
   padding-bottom: 119px;
+  display: flex;
 }
 .about-images-list {
-  /*  */
+  display: flex;
+  margin-right: 64px;
 }
 .about-images-list li {
   width: 270px;
@@ -200,7 +238,7 @@ body {
   margin-right: 45px;
 } */
 .about-images-list li:not(:last-child) {
-  margin-right: 45px;
+  margin-right: 30px;
 }
 .about .title {
   margin-top: 20px;
@@ -226,6 +264,8 @@ body {
 .price-section .container {
   padding-top: 130px;
   padding-bottom: 130px;
+  display: flex;
+  flex-direction: column;
 }
 .price-section .title {
   margin-top: 20px;
@@ -233,6 +273,11 @@ body {
 }
 .price-section .sign-link {
   margin-top: 50px;
+  align-self: center;
+}
+.tables-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 /* PRICE section */
 
@@ -240,10 +285,64 @@ body {
 .features-section .container {
   padding-top: 121px;
   padding-bottom: 130px;
+  display: flex;
+  justify-content: center;
 }
+
 .features-section .title {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 370px;
+  margin-right: 130px;
+}
+.features-list li {
+  width: 170px;
+  height: 133px;
+  display: flex;
+  flex-flow: column;
+  padding: 20px 24px;
+  background: #f1dcdc;
+}
+.features-list li:nth-child(1),
+.features-list li:nth-child(3) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.features-list li:nth-child(2),
+.features-list li:nth-child(4) {
+  margin-top: 30px;
+}
+.features-content {
+  width: 560px;
+}
+
+/* .features-list li:nth-child(2n +1){
+  background-color: aqua;
+}
+.features-list li:nth-child(2n){
+  background-color: rgb(58, 185, 58);
+} */
+
+.features-list sup {
+  color: var(--pretty-color);
+}
+.score {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.357;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.score-desc {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.363;
+  text-align: center;
 }
 /* features-section */
 
@@ -256,12 +355,29 @@ body {
   margin-top: 20px;
   margin-bottom: 44px;
 }
+
+.masters-list {
+  display: flex;
+  /* 1 */
+  justify-content: space-between;
+  flex-flow: row wrap;
+  /* 2 */
+  /* margin-right: -30px; */
+}
+.masters-list li:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+  flex-basis: calc((100% - 30px) / 3);
+}
 .masters-list-item {
   border: 1px solid;
-  width: 370px;
+  /* width: 370px; */
   text-align: center;
 }
-
+.masters-list-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .masters-list-item h3 {
   margin-top: 30px;
   margin-bottom: 8px;
@@ -269,23 +385,62 @@ body {
 .icons-list {
   width: 180px;
   margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+
+  justify-content: space-between;
+}
+.icons-list li:not(:last-child) {
+  margin-right: 10px;
+}
+.icons-list li {
+  width: 44px;
+  height: 44px;
+  background-color: bisque;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* MASTERS section */
 
+/* BARBA section */
+.barba .container {
+  padding-top: 100px;
+  padding-bottom: 62px;
+}
+.barba-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+/* BARBA section */
+
 /* CONTACTS section */
-.contacs-section {
+.contacts-section {
   background-color: var(--black-color);
   color: var(--while-color);
 }
-.contacs-section .sign-link {
+.contacts-section .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.form-wrapper,
+.contacts-wrapper {
+  flex-basis: calc((100% - 40px) / 2);
+}
+.contacts-section .sign-link {
   padding: 12px 38px;
   background-color: transparent;
   color: inherit;
   cursor: pointer;
 }
-.contacs-section .sign-link:hover,
-.contacs-section .sign-link:focus {
+.contacts-section .sign-link:hover,
+.contacts-section .sign-link:focus {
   background-color: var(--pretty-color);
 }
 /* CONTACTS section */
