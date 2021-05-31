@@ -18,29 +18,38 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
+  <template class="my-icons">
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-mail"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-map-pin"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-phone"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-instagram"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+    </svg>
+    <svg class="icon">
+      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+    </svg>
+  </template>
+
   <body>
     <header class="header">
       <div class="container">
         <a href="">
           <img src="./images/icons/logo.svg" alt="logo" />
         </a>
-        <!-- <a href="#" class="test-inline">INLINE TAG</a>
-        <a href="#" class="test-inline">INLINE TAG</a>
-        <p class="test-block">BLOCK TAG</p>
-        <a href="#">About</a> -->
         <nav class="nav">
-          <!-- <ul class="nav-list">
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum</li>
-          </ul> -->
           <ul class="nav-list">
             <li class="item">
               <a href="#about" class="active">О нас</a>
@@ -71,10 +80,11 @@
         </nav>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="media-list">
+          <ul class="media-list pseudo">
             <li class="media-list-item item">
               <a href="" class="link">Instagram</a>
             </li>
@@ -84,7 +94,7 @@
           </ul>
 
           <div class="hero-content">
-            <p class="pre-title">A hair salon for men in Kyiv</p>
+            <p class="pre-title pseudo">A hair salon for men in Kyiv</p>
             <h1 class="title">BarberShop</h1>
             <p class="text">
               Мы эксперты в модных мужских стрижках.
@@ -105,7 +115,7 @@
       </section>
       <!-- Нужно написать -->
       <!-- Результат -->
-      <div class="container"></div>
+      <!-- <div class="container"></div> -->
       <section id="about" class="about">
         <div class="container">
           <ul class="about-images-list">
@@ -117,7 +127,7 @@
             </li>
           </ul>
           <div>
-            <p class="pre-title">о нас</p>
+            <p class="pre-title pseudo">о нас</p>
             <h2 class="title">Лучший Барбершоп твоего города</h2>
             <h3 class="text">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
@@ -136,7 +146,7 @@
       </section>
       <section id="price" class="price-section">
         <div class="container">
-          <p class="pre-title">Проведи время в компании лучших мастеров</p>
+          <p class="pre-title pseudo">Проведи время в компании лучших мастеров</p>
           <h2 class="title">Услуги и цены</h2>
           <div class="tables-wrapper">
             <table class="text">
@@ -228,7 +238,7 @@
             </li>
           </ul>
           <div class="features-content">
-            <p class="pre-title">старая традиционная школа</p>
+            <p class="pre-title pseudo">старая традиционная школа</p>
             <h2 class="title">Почему приходят именно к нам?</h2>
             <p class="text">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и
@@ -239,36 +249,9 @@
       </section>
       <section id="masters" class="masters">
         <div class="container">
-          <p class="pre-title">для настоящих ценителей атмосферы</p>
+          <p class="pre-title pseudo">для настоящих ценителей атмосферы</p>
           <h2 class="title">Наши мастера</h2>
           <ul class="masters-list">
-            <!-- <li class="masters-list-item">
-              <img src="./images/emp1.jpg" alt="employe1" width="370" />
-              <h3>John Smith</h3>
-              <p>Extreme Barber</p>
-              <ul class="icons-list">
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
-                  </a>
-                </li>
-              </ul>
-            </li> -->
             <li class="masters-list-item">
               <img src="./images/emp2.jpg" alt="employe2" width="370" />
               <h3>Michele Doe</h3>
@@ -276,26 +259,41 @@
               <ul class="icons-list">
                 <li>
                   <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
+                    <!-- <img src="./images/icons/social-icons/instagram.svg" alt="insta" /> -->
+                    <svg class="icon">
+                      <use
+                        href="./images/icons/sprite.svg#icon-instagram"
+                      ></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
+                    <!-- <img src="./images/icons/social-icons/twitter.svg" alt="twitter" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
+                    <!-- <img src="./images/icons/social-icons/facebook.svg" alt="facebook" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
+                    <!-- <img src="./images/icons/social-icons/linkedin.svg" alt="linkedIn" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </li>
+
             <li class="masters-list-item">
               <img src="./images/emp3.jpg" alt="employe3" width="370" />
               <h3>John Smith</h3>
@@ -303,22 +301,36 @@
               <ul class="icons-list">
                 <li>
                   <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
+                    <!-- <img src="./images/icons/social-icons/instagram.svg" alt="insta" /> -->
+                    <svg class="icon">
+                      <use
+                        href="./images/icons/sprite.svg#icon-instagram"
+                      ></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
+                    <!-- <img src="./images/icons/social-icons/twitter.svg" alt="twitter" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
+                    <!-- <img src="./images/icons/social-icons/facebook.svg" alt="facebook" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
+                    <!-- <img src="./images/icons/social-icons/linkedin.svg" alt="linkedIn" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
@@ -331,76 +343,36 @@
               <ul class="icons-list">
                 <li>
                   <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
+                    <!-- <img src="./images/icons/social-icons/instagram.svg" alt="insta" /> -->
+                    <svg class="icon">
+                      <use
+                        href="./images/icons/sprite.svg#icon-instagram"
+                      ></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
+                    <!-- <img src="./images/icons/social-icons/twitter.svg" alt="twitter" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
+                    <!-- <img src="./images/icons/social-icons/facebook.svg" alt="facebook" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="masters-list-item">
-              <img src="./images/emp2.jpg" alt="employe2" width="370" />
-              <h3>Michele Doe</h3>
-              <p>Extreme Barber</p>
-              <ul class="icons-list">
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="masters-list-item">
-              <img src="./images/emp3.jpg" alt="employe3" width="370" />
-              <h3>John Smith</h3>
-              <p>Extreme Barber</p>
-              <ul class="icons-list">
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/instagram.svg" alt="insta" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/twitter.svg" alt="twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/facebook.svg" alt="facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="./images/icons/linkedin.svg" alt="linkedIn" />
+                    <!-- <img src="./images/icons/social-icons/linkedin.svg" alt="linkedIn" /> -->
+                    <svg class="icon">
+                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
@@ -411,7 +383,7 @@
       <section class="barba">
         <div class="container">
           <!-- <h2></h2> -->
-          <p>На латинском языке “барба” означает “борода”</p>
+          <p class="pre-title pseudo">На латинском языке “барба” означает “борода”</p>
           <ul class="barba-list">
             <li>
               <img src="./images/pic1.jpg" alt="pic1" width="270" />
@@ -442,21 +414,21 @@
 
           <div class="contacts-wrapper" id="contacts">
             <h2 class="title">Контакты</h2>
-            <address class="text">
-              <ul>
+            <address class="address text">
+              <ul class="address-list">
                 <li>
-                  <p>ул. Васильковая, 7А Киев, 08132</p>
+                  <p class="map">ул. Васильковая, 7А Киев, 08132</p>
                 </li>
                 <li>
-                  <a href="tel:+380441111111">+38 044 111 11 11</a>
+                  <a class="phone" href="tel:+380441111111">+38 044 111 11 11</a>
                 </li>
                 <li>
-                  <a href="mail:barbershop@email.com">barbershop@email.com</a>
+                  <a class="mail" href="mail:barbershop@email.com">barbershop@email.com</a>
                 </li>
               </ul>
             </address>
             <div>
-              <h3>время работы</h3>
+              <h3 class="pseudo">время работы</h3>
               <p class="text">Ежедневно с 9:00 до 22:00</p>
             </div>
           </div>
@@ -464,11 +436,11 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <!-- copyright, etc -->
         <p>&copy; Copyright 2020</p>
-        <ul class="media-list">
+        <ul class="media-list pseudo">
           <li>
             <a href="">Instagram</a>
           </li>
@@ -478,6 +450,7 @@
         </ul>
       </div>
     </footer>
+
     <script src="./js//index.js" type="module"></script>
   </body>
 </html>

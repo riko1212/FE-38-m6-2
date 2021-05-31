@@ -1,3 +1,16 @@
+/* EXAMPLE */
+/* .icon {
+  fill: rgb(69, 207, 14);
+  stroke: rgb(231, 70, 70);
+  width: 20px;
+  height: 20px;
+}
+.icon:hover {
+  fill: rgb(202, 84, 84);
+  stroke: rgb(57, 223, 41);
+} */
+/* EXAMPLE */
+
 /* .test-inline {
   border: 1px solid red;
   height: 200px;
@@ -36,8 +49,14 @@
   --main-font: 'Open Sans', sans-serif;
   --accent-font: 'Raleway', sans-serif;
   --grey-op: rgba(157, 164, 189, 0.6);
+  --grey-opacity: rgba(157, 164, 189, 0.4);
+
   --grey: #9da4bd;
   --dark-grey: #555555;
+
+  --about-back: #111319;
+  --contacts-back: #191c26;
+  --grey-back: #f7f7f7;
 }
 
 body {
@@ -86,6 +105,38 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.pseudo {
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+}
+.pseudo::before {
+  /* display: inline-block; */
+  display: flex;
+  content: '';
+  width: 60px;
+  /* height: 1px; */
+  border: 1px solid;
+  color: var(--black-color);
+  margin-right: 20px;
+}
+.hero-content .pseudo::before,
+.price-section .pseudo::before {
+  color: var(--grey-op);
+}
+.contacts-wrapper .pseudo::before {
+  color: var(--grey-opacity);
+}
+
+.media-list {
+  display: flex;
+}
+.media-list li:not(:last-child) {
+  margin-right: 40px;
+}
+.media-list.pseudo::before {
+  margin-right: 40px;
+}
 
 .title {
   font-family: var(--accent-font);
@@ -99,11 +150,6 @@ body {
   font-size: 18px;
   line-height: 1.667;
   letter-spacing: 0.02em;
-}
-
-.media-list li:hover,
-.media-list li:focus {
-  color: var(--pretty-color);
 }
 
 /* HEADER STYLES */
@@ -180,9 +226,7 @@ body {
   padding-left: 215px;
   padding-bottom: 40px;
 }
-.media-list {
-  display: none;
-}
+
 .hero .pre-title {
   color: var(--grey-op);
 }
@@ -267,6 +311,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.price-section .pre-title {
+  color: var(--grey-op);
+}
 .price-section .title {
   margin-top: 20px;
   margin-bottom: 44px;
@@ -350,6 +397,7 @@ body {
 .masters .container {
   padding-top: 130px;
   padding-bottom: 60px;
+  background-color: var(--grey-back);
 }
 .masters .title {
   margin-top: 20px;
@@ -365,10 +413,11 @@ body {
   /* margin-right: -30px; */
 }
 .masters-list li:not(:nth-last-child(-n + 2)) {
-  margin-bottom: 30px;
-  flex-basis: calc((100% - 30px) / 3);
+  /* margin-bottom: 30px; */
+  /* flex-basis: calc((100% - 30px) / 3); */
 }
 .masters-list-item {
+  padding-bottom: 30px;
   border: 1px solid;
   /* width: 370px; */
   text-align: center;
@@ -383,12 +432,11 @@ body {
   margin-bottom: 8px;
 }
 .icons-list {
-  width: 180px;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
 
-  justify-content: space-between;
+  justify-content: center;
 }
 .icons-list li:not(:last-child) {
   margin-right: 10px;
@@ -396,12 +444,19 @@ body {
 .icons-list li {
   width: 44px;
   height: 44px;
-  background-color: bisque;
+  background-color: white;
   border-radius: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.icons-list .icon {
+  width: 20px;
+  height: 20px;
+}
+.icons-list .icon:hover {
+  fill: var(--pretty-color);
 }
 
 /* MASTERS section */
@@ -443,4 +498,41 @@ body {
 .contacts-section .sign-link:focus {
   background-color: var(--pretty-color);
 }
+.address-list p {
+  display: inline-block;
+}
+
+/* ПСЕВДОЭЛЕМЕНТЫ С ИКОНКАМИ */
+.address-list .map::before,
+.address-list .phone::before,
+.address-list .mail::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+.address-list .map::before {
+  background-image: url('../images/icons/map-pin.svg');
+}
+.address-list .phone::before {
+  background-image: url('../images/icons/phone.svg');
+}
+.address-list .mail::before {
+  background-image: url('../images/icons/mail.svg');
+}
+/* ПСЕВДОЭЛЕМЕНТЫ С ИКОНКАМИ */
+
 /* CONTACTS section */
+
+/* FOOTER */
+.footer .container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grey-back);
+  margin-top: 68px;
+}
+
+/* FOOTER */
