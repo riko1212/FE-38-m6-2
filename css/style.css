@@ -67,9 +67,9 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 55px;
 }
 
 .sign-link {
@@ -124,6 +124,12 @@ body {
 .price-section .pseudo::before {
   color: var(--grey-op);
 }
+.contacts-wrapper .pseudo {
+  margin-bottom: 20px;
+}
+.contacts-wrapper .text {
+  color: var(--grey);
+}
 .contacts-wrapper .pseudo::before {
   color: var(--grey-opacity);
 }
@@ -153,23 +159,21 @@ body {
 }
 
 /* HEADER STYLES */
-.header {
-  background: var(--black-color);
+.header .container {
+  background: linear-gradient(90deg, white 155px, black 155px);
+
   color: var(--while-color);
+  display: flex;
+  padding-top: 28px;
+}
+.logo {
+  display: block;
 }
 .nav {
   display: flex;
   justify-content: space-between;
-  /* а вдруг я захочу, чтобы его вложенные списки встали в столбик */
-  /* flex-direction: column; */
-
-  /* а тут мы разрешили перенос детей на следующую строку,
- если они не поместились в этой */
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  /* Альтернатива  */
-  flex-flow: row wrap;
+  width: 100%;
+  margin-left: 32px;
 }
 .nav-list {
   display: flex;
@@ -218,15 +222,27 @@ body {
 
 /* HERO section */
 .hero {
-  background-color: var(--black-color);
   color: var(--while-color);
 }
 .hero .container {
   padding-top: 272px;
-  padding-left: 215px;
+  padding-left: 255px;
   padding-bottom: 40px;
+  background: linear-gradient(90deg, white 155px, black 155px);
 }
 
+.hero .media-list {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 44%;
+  left: 12%;
+  color: var(--black-color);
+}
+
+.hero-content {
+  display: flex;
+  flex-flow: column;
+}
 .hero .pre-title {
   color: var(--grey-op);
 }
@@ -242,6 +258,7 @@ body {
 .slider-buttons {
   display: flex;
   align-self: flex-end;
+  margin-top: 142px;
 }
 .slider-buttons li:not(:last-child) {
   margin-right: 26px;
@@ -498,8 +515,20 @@ body {
 .contacts-section .sign-link:focus {
   background-color: var(--pretty-color);
 }
-.address-list p {
-  display: inline-block;
+.address-list {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.address-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.address-list p,
+.address-list a {
+  display: flex;
+  align-items: center;
+}
+.mail {
+  text-decoration: underline;
 }
 
 /* ПСЕВДОЭЛЕМЕНТЫ С ИКОНКАМИ */
@@ -507,7 +536,7 @@ body {
 .address-list .phone::before,
 .address-list .mail::before {
   content: '';
-  display: inline-block;
+  display: inline-flex;
   width: 24px;
   height: 24px;
   margin-right: 16px;
