@@ -103,3 +103,4 @@ background & <img> - без ховера и фокуса
 
 .png - для картинок, с прозрачным или изменяемым фоном
 
+https://seeklogo.com/vector-logo/357693/tiktok-icon
