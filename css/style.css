@@ -122,12 +122,12 @@ body {
 
 .sticky {
   position: sticky;
-  background-color: wheat;
+  background-color: rgb(52, 126, 49);
   top: 90px;
   padding: 10px;
 }
 
-#absolute {
+/* #absolute {
   position: absolute;
   top: 44%;
   left: 5%;
@@ -135,8 +135,15 @@ body {
   transform: rotate(-90deg);
   color: var(--black-color);
   font-weight: bold;
-}
+} */
 /* ПОЗИЦИОНИРОВАНИЕ */
+
+.aside {
+  display: flex;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
 
 /* АНИМАШКИ */
 @keyframes anime1 {
@@ -192,7 +199,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-left: 32px;
+  /* margin-left: 32px; */
 }
 .nav-list {
   display: flex;
@@ -226,19 +233,26 @@ body {
   color: var(--while-color);
 }
 .hero .container {
-  padding-top: 272px;
-  padding-left: 255px;
+  display: flex;
+  padding-top: 200px;
+  /* padding-left: 255px; */
   padding-bottom: 40px;
   background: linear-gradient(90deg, white 155px, black 155px);
 }
 
+.hero aside {
+  transform: rotate(-90deg);
+}
+
 .hero .media-list {
-  color: rgb(43, 255, 0);
+  color: var(--black-color);
 }
 
 .hero-content {
   display: flex;
   flex-flow: column;
+  flex-grow: 1;
+  padding-left: 40px;
 }
 .hero .pre-title {
   color: var(--grey-op);

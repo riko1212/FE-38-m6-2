@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animation.css" />
+    <!-- <link rel="stylesheet" href="./css//slider-anime.css"> -->
   </head>
 
   <template class="my-icons">
@@ -47,9 +48,12 @@
   <body>
     <header class="header fixed">
       <div class="container">
-        <a href="" class="logo">
-          <img src="./images/icons/logo.svg" alt="logo" />
-        </a>
+        <aside class="aside">
+          <a href="" class="logo">
+            <img src="./images/icons/logo.svg" alt="logo" />
+          </a>
+        </aside>
+
         <nav class="nav">
           <ul class="nav-list">
             <li class="item">
@@ -88,15 +92,16 @@
 
       <section class="hero">
         <div class="container">
-          <ul class="media-list pseudo" id="absolute">
-            <li class="media-list-item item">
-              <a href="" class="link">Instagram</a>
-            </li>
-            <li class="media-list-item item">
-              <a href="">Youtube</a>
-            </li>
-          </ul>
-
+          <aside class="aside">
+            <ul class="media-list pseudo" id="absolute">
+              <li class="media-list-item item">
+                <a href="" class="link">Instagram</a>
+              </li>
+              <li class="media-list-item item">
+                <a href="">Youtube</a>
+              </li>
+            </ul>
+          </aside>
           <div class="hero-content">
             <p class="pre-title pseudo sticky">A hair salon for men in Kyiv</p>
             <h1 class="title">BarberShop</h1>
@@ -361,45 +366,51 @@
             <li class="masters-list-item">
               <img src="./images/emp1.jpg" alt="employe1" width="370" />
               <div class="master-wrapper">
-              <h3>John Smith</h3>
-              <p>Extreme Barber</p>
-              <ul class="icons-list">
-                <li>
-                  <a href="#">
-                    <!-- <img src="./images/icons/social-icons/instagram.svg" alt="insta" /> -->
-                    <svg class="icon">
-                      <use
-                        href="./images/icons/sprite.svg#icon-instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <!-- <img src="./images/icons/social-icons/twitter.svg" alt="twitter" /> -->
-                    <svg class="icon">
-                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <!-- <img src="./images/icons/social-icons/facebook.svg" alt="facebook" /> -->
-                    <svg class="icon">
-                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <!-- <img src="./images/icons/social-icons/linkedin.svg" alt="linkedIn" /> -->
-                    <svg class="icon">
-                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <h3>John Smith</h3>
+                <p>Extreme Barber</p>
+                <ul class="icons-list">
+                  <li>
+                    <a href="#">
+                      <!-- <img src="./images/icons/social-icons/instagram.svg" alt="insta" /> -->
+                      <svg class="icon">
+                        <use
+                          href="./images/icons/sprite.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <!-- <img src="./images/icons/social-icons/twitter.svg" alt="twitter" /> -->
+                      <svg class="icon">
+                        <use
+                          href="./images/icons/sprite.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <!-- <img src="./images/icons/social-icons/facebook.svg" alt="facebook" /> -->
+                      <svg class="icon">
+                        <use
+                          href="./images/icons/sprite.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <!-- <img src="./images/icons/social-icons/linkedin.svg" alt="linkedIn" /> -->
+                      <svg class="icon">
+                        <use
+                          href="./images/icons/sprite.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -487,7 +498,11 @@
       </div>
     </footer>
 
-    <script src="./js//index.js" type="module"></script>
+    <div class="modal">
+      <form action=""></form>
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
 
