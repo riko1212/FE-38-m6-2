@@ -54,10 +54,14 @@ body {
   color: inherit;
   border: 1px solid var(--pretty-color);
   border-radius: 25px;
+  transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .sign-link:hover {
   background-color: var(--pretty-color);
   color: var(--while-color);
+  transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .pre-title {
@@ -120,7 +124,8 @@ body {
   position: fixed;
   width: 100%;
   top: 10px;
-  /* z-index: 3; */
+  z-index: 9999;
+  /* z-index: 2; */
 }
 
 .sticky {
@@ -128,6 +133,7 @@ body {
   background-color: rgb(52, 126, 49);
   top: 90px;
   padding: 10px;
+  z-index: 1;
 }
 
 /* #absolute {
@@ -309,6 +315,9 @@ body {
 .about-images-list li {
   width: 270px;
 }
+.about-images-list li:hover {
+  transform: perspective(300px);
+}
 
 .about-images-list li:not(:last-child) {
   margin-right: 30px;
@@ -330,9 +339,48 @@ body {
 /* ABOUT section */
 
 /* PRICE section */
+@keyframes rainbow {
+  0% {
+    background-color: rgba(250, 17, 17, 0.466);
+  }
+  20% {
+    background-color: rgba(226, 144, 11, 0.541);
+  }
+  40% {
+    background-color: rgba(221, 245, 8, 0.472);
+  }
+  60% {
+    background-color: rgba(41, 245, 0, 0.507);
+  }
+  80% {
+    background-color: rgba(6, 154, 240, 0.527);
+  }
+  90% {
+    background-color: rgba(26, 13, 144, 0.459);
+  }
+  100% {
+    background-color: rgba(66, 6, 90, 0.459);
+  }
+}
+
 .price-section {
-  background-color: var(--black-color);
   color: var(--while-color);
+  /* background-color: var(--black-color); */
+
+  /* animation-name: rainbow;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+
+  animation: rainbow 3000ms linear infinite;
+
+  /* animation: rainbow 3000ms linear 1; */
+  /* animation-fill-mode: forwards; */
+  /* animation-fill-mode: backwards; */
+  /* animation-fill-mode: both; */
+}
+.price-section:hover {
+  animation-play-state: paused;
 }
 .price-section .container {
   padding-top: 130px;
@@ -384,10 +432,19 @@ body {
   padding: 20px 24px;
   background: #f1dcdc;
 }
-.features-list li:hover {
-  /* transform: skew(10deg); */
+.features-list li:hover,
+.features-list li:focus {
   /* transition: transform 500ms ease; */
 }
+.features-list li:nth-child(1):hover,
+.features-list li:nth-child(3):hover {
+  transform: skewX(10deg);
+}
+.features-list li:nth-child(2):hover,
+.features-list li:nth-child(4):hover {
+  transform: skewY(20deg);
+}
+
 .features-list li:nth-child(1),
 .features-list li:nth-child(3) {
   margin-right: 30px;
@@ -449,8 +506,13 @@ body {
 .masters-list-item:hover,
 .masters-list-item:focus {
   box-shadow: 10px 0 20px 10px black;
+  transform: rotate(10deg);
+}
+.masters-list-item:nth-child(2n + 1):hover,
+.masters-list-item:nth-child(2n + 1):focus {
   transform: scale(1.1);
 }
+
 .masters-list-item img {
   width: 100%;
   height: auto;
@@ -514,6 +576,17 @@ img {
   position: relative;
   overflow: hidden;
 }
+@keyframes back {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 .hover-wrapper {
   position: absolute;
   width: 100%;
@@ -521,27 +594,35 @@ img {
   background: rgba(17, 0, 255, 0.431);
   top: 0;
   transform: scale(1);
+  opacity: 0;
 }
 .barba-list li:nth-child(1):hover .hover-wrapper {
   display: block;
-  transform: translate(0);
-  transition: transform 2000ms ease;
-  transform: scale(0);
+  /* transform: translate(0); */
+  /* transition: transform 2000ms ease; */
+  opacity: 1;
+  animation: back 2s linear infinite normal;
 }
 .barba-list li:nth-child(2):hover .hover-wrapper {
   display: block;
-  transform: translate(0);
-  transition: transform 2000ms ease-in;
+  /* transform: translate(0); */
+  /* transition: transform 2000ms ease-in; */
+  opacity: 1;
+  animation: back 2s linear infinite reverse;
 }
 .barba-list li:nth-child(3):hover .hover-wrapper {
   display: block;
-  transform: translate(0);
-  transition: transform 2000ms ease-in-out;
+  /* transform: translate(0); */
+  /* transition: transform 2000ms ease-in-out; */
+  opacity: 1;
+  animation: back 2s linear infinite alternate;
 }
 .barba-list li:nth-child(4):hover .hover-wrapper {
   display: block;
-  transform: translate(0);
-  transition: transform 2000ms ease-out;
+  /* transform: translate(0); */
+  /* transition: transform 2000ms ease-out; */
+  opacity: 1;
+  animation: back 2s linear infinite alternate-reverse;
 }
 .barba-list li:hover {
   border: 10px solid yellowgreen;
@@ -647,6 +728,7 @@ form {
 .contacts-section .sign-link:hover,
 .contacts-section .sign-link:focus {
   background-color: var(--pretty-color);
+  transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .address-list {
   margin-top: 40px;

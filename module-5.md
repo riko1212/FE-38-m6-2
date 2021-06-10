@@ -37,7 +37,6 @@ transform: type-of-transform
 
 types:
 
-### perspective(100px)
 
 translate(x, y)
 translateX(x)
@@ -82,13 +81,14 @@ transform: rotate(-90deg);
 transform: skew(10deg);
 }
 
-<!--  -->
+<!-- точка вращения -->
 
 transform-origin: top right
 center center
 bottom left
 
 <!--  -->
+### perspective(100px)
 
 @keyframes rotateWithOrigin {
 0% {
@@ -133,7 +133,7 @@ PROP
 PROP
 }
 }
-
+animation: name duration timing delay infinite direction
 ### animation-name: name;
 ### animation-duration: 300ms;
 ### animation-timing-function: linear;
