@@ -687,11 +687,11 @@ img {
 .form-wrapper input {
     padding-bottom: 8px;
 }
-form {
+/* form {
     width: 560px;
     display: flex;
     flex-flow: row wrap;
-}
+} */
 .form-wrapper input,
 .form-wrapper textarea {
     display: inline-block;

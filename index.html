@@ -505,28 +505,47 @@
       </div>
     </footer>
 
-    <div class="modal is-hidden" id="modal" data-modal>
+    <div class="modal" id="modal" data-modal>
       <div class="modal-content" id="modal-content">
+
         <button data-modal-close type="button">close</button>
-        <!-- <form>
-          <input type="text" name="" id="" />
-        </form> -->
-        <p style="text-align: center;">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cum
-          adipisci aliquam blanditiis atque laudantium iste, ea possimus iure
-          repellendus, incidunt, quidem quisquam unde reprehenderit eveniet
-          illum debitis quaerat? Doloremque tempora molestiae harum cum
-          veritatis eius asperiores nobis aperiam ut tempore, quae, commodi a
-          quisquam aliquam enim aut odio ipsum libero non, explicabo rerum et!
-          Obcaecati vitae enim sint dignissimos ex, quaerat doloribus ducimus
-          dolorem expedita molestias quam, sapiente fugiat beatae, doloremque
-          veniam maxime pariatur. Illum saepe voluptates mollitia earum autem
-          unde dicta possimus? Minus eos error suscipit distinctio doloribus,
-          placeat fugit ex quis qui earum animi harum ratione nostrum?
-        </p>
+        <form action="#" class="modal-form">
+          <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <label class="modal-form-field">
+            Имя*
+            <span class="modal-form-field-wrap">
+              <input type="text" minlength="2" placeholder="Andrii" name="user-name" class="modal-form-input" required />
+              <span class="modal-form-icon">&#128113;</span>
+            </span>
+            
+          </label>
+          <label class="modal-form-field">
+            Телефон*
+            <span class="modal-form-field-wrap">
+            <input type="tel" placeholder="096-111-11-11" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="user-phone" class="modal-form-input" required />
+            <span class="modal-form-icon">&#128222;</span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            Cообщение*
+            <textarea name="user-comment" class="modal-form-text" placeholder="Комментарий"></textarea>
+          </label>
+          <input type="checkbox" name="user-agree" id="checkbox" required class="visually-hidden modal-form-check">
+          <label for="checkbox" class="modal-form-check-policy">
+            <span class="modal-form-check-wrap">
+&#10003;
+<svg>
+  <use></use>
+</svg>
+            </span>
+            Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+          <button type="submit" class="modal-form-btn">Отправить</button>
+          
+        </form>
+        
       </div>
     </div>
 
-    <script src="./js/modal.js" type="module"></script>
+    <!-- <script src="./js/modal.js" type="module"></script> -->
   </body>
 </html>
