@@ -1,0 +1,43 @@
+.header .container {
+    background: linear-gradient(90deg, white 155px, black 155px);
+
+    color: var(--while-color);
+    display: flex;
+    padding-top: 28px;
+}
+.logo {
+    display: block;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* margin-left: 32px; */
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+li {
+    margin-left: 40px;
+}
+} 
+
+.contacts-list {
+    display: flex;
+    align-items: center;
+}
+.contacts-list li:not(:last-child) {
+    margin-right: 40px;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.phone-link:hover,
+.phone-link:focus,
+.media-list a:hover,
+.media-list a:focus {
+    color: var(--pretty-color);
+}

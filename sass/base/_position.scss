@@ -1,0 +1,25 @@
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    z-index: 9999;
+    /* z-index: 2; */
+}
+
+.sticky {
+    position: sticky;
+    background-color: rgb(52, 126, 49);
+    top: 90px;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* #absolute {
+  position: absolute;
+  top: 44%;
+  left: 5%;
+
+  transform: rotate(-90deg);
+  color: var(--black-color);
+  font-weight: bold;
+} */

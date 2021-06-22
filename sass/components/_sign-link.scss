@@ -1,0 +1,21 @@
+.sign-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.362;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    background: transparent;
+    /* color: var(--while-color); */
+    color: inherit;
+    border: 1px solid var(--pretty-color);
+    border-radius: 25px;
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+        color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.sign-link:hover {
+    background-color: var(--pretty-color);
+    color: var(--while-color);
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+        color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
