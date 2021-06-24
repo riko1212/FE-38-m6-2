@@ -1,0 +1,20 @@
+/* ФОНЫ */
+.header {
+    background-position: center;
+    background: linear-gradient(90deg, white 50%, black 50%);
+}
+.hero {
+    background: linear-gradient(90deg, white 50%, black 50%);
+}
+.contacts-section {
+    background: linear-gradient(
+        90deg,
+        rgba(25, 28, 38, 1) 50%,
+        rgba(25, 28, 38, 0.9) 50%
+    );
+}
+.masters,
+.footer {
+    background-color: var(--grey-back);
+}
+/* ФОНЫ */

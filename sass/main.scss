@@ -1,13 +1,28 @@
 @import './vendor/normalize';
 
+@import './utils/vars';
 @import './utils/visually-hidden';
+
 @import './base/container';
 @import './base/common';
 @import './base/position';
+@import './base/bg';
+
 @import './components/sign-link';
+@import './components/media';
 @import './components/pre-title';
 @import './components/title';
 @import './components/text';
+
 @import './layout/header';
+@import './layout/asside';
 @import './layout/hero';
-@import './utils/vars';
+@import './layout/about';
+@import './layout/price';
+@import './layout/features';
+@import './layout/masters';
+@import './layout/barba';
+@import './layout/barba';
+@import './layout/contacts';
+@import './layout/footer';
+

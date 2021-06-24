@@ -1,0 +1,15 @@
+@keyframes anime1 {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: black;
+    }
+}
+.anime {
+    height: 200px;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}

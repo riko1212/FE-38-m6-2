@@ -1,0 +1,33 @@
+.about .container {
+    padding-top: 137px;
+    padding-bottom: 119px;
+    display: flex;
+}
+.about-images-list {
+    display: flex;
+    margin-right: 64px;
+}
+.about-images-list li {
+    width: 270px;
+}
+.about-images-list li:hover {
+    transform: perspective(300px);
+}
+
+.about-images-list li:not(:last-child) {
+    margin-right: 30px;
+}
+.about .title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.about .description {
+    font-size: 14px;
+    line-height: 1.857;
+
+    letter-spacing: 0.02em;
+
+    color: var(--dark-grey);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
